@@ -1,0 +1,42 @@
+# Job Seeker Analysis - Requirements
+# Machine Learning-based Prediction Model for Young Job Seekers'
+# Preference for Strong SMEs (강소기업)
+
+# Core Data Processing
+pandas>=1.5.0
+numpy>=1.23.0
+scipy>=1.9.0
+
+# Machine Learning
+scikit-learn>=1.1.0
+lightgbm>=3.3.0
+xgboost>=1.7.0
+catboost>=1.1.0
+
+# Hyperparameter Optimization
+optuna>=3.0.0
+
+# Statistical Analysis
+statsmodels>=0.13.0
+
+# Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Excel Support
+openpyxl>=3.0.0
+
+# Web Crawling (for data collection)
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+selenium>=4.7.0
+
+# Jupyter Support (optional)
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Imbalanced Learning (optional)
+imbalanced-learn>=0.10.0
+
+# Progress Bars (optional)
+tqdm>=4.64.0

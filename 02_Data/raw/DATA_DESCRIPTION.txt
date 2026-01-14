@@ -1,0 +1,75 @@
+================================================================================
+                         DATA DESCRIPTION
+================================================================================
+
+This directory should contain the following data files for analysis:
+
+--------------------------------------------------------------------------------
+1. 2023_strong_sme_government.xlsx
+--------------------------------------------------------------------------------
+   Source: Ministry of Employment and Labor (고용노동부)
+   URL: https://www.moel.go.kr
+   Description: 2023 Strong SME (강소기업) Selection Status
+   Records: ~27,737 companies
+
+   Columns:
+   - 연번 (Serial Number)
+   - 브랜드명 (Brand Name/Certification Type)
+   - 사업장명 (Company Name)
+   - 대표자명 (Representative Name)
+   - 업종(중분류) (Industry Category - Middle Classification)
+   - 주소 (Address)
+
+--------------------------------------------------------------------------------
+2. youth_worknet_crawling.csv
+--------------------------------------------------------------------------------
+   Source: Youth Worknet (청년워크넷)
+   URL: https://www.work.go.kr/jobyoung/
+   Description: Web-crawled data of Strong SME company information and
+                job seeker interest/preference data
+   Records: ~27,780 companies
+   Collection Method: Selenium-based dynamic web crawling
+
+   Columns:
+   - 기업명 (Company Name)
+   - 선정분야 (Certification Field)
+   - 업종/규모 (Industry/Size)
+   - 근로자수 (Number of Employees - text format)
+   - 소재지 (Location)
+   - 관심기업 (Interest Count - votes from job seekers)
+   - 직원수 (Employee Count - numeric)
+   - 기업규모 (Company Size)
+   - 소재지(대) (Region - Major)
+   - 소재지(중) (Region - Minor)
+   - 관심기업건수 (Interest Count - numeric)
+
+--------------------------------------------------------------------------------
+HOW TO OBTAIN THE DATA
+--------------------------------------------------------------------------------
+
+1. Government Data (2023_strong_sme_government.xlsx):
+   - Visit: https://www.moel.go.kr
+   - Navigate to: 뉴스·소식 > 공지사항
+   - Search for: "2023년도 고용노동부 선정 강소기업"
+   - Download the attached Excel file
+
+2. Youth Worknet Data (youth_worknet_crawling.csv):
+   - Visit: https://www.work.go.kr/jobyoung/
+   - Navigate to: 청년친화강소기업
+   - Use Selenium to crawl company data
+   - Reference crawling code available upon request
+
+--------------------------------------------------------------------------------
+DATA PROCESSING NOTES
+--------------------------------------------------------------------------------
+
+After obtaining the data files:
+
+1. Place them in this directory (02_Data/raw/)
+2. Run the analysis: python 01_Code/main.py
+3. Processed data will be saved to 02_Data/processed/
+4. Results will be exported to 03_Results/
+
+================================================================================
+                    Contact: jinsoo96@github.com
+================================================================================
